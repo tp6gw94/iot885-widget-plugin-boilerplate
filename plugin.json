@@ -1,0 +1,42 @@
+{
+  "editor": {
+    "fields": [
+      {
+        "name": "test",
+        "label": "Test",
+        "type": "text",
+        "defaultValue": "test",
+        "require": true
+      },
+      {
+        "name": "test2",
+        "label": "Test2",
+        "type": "select",
+        "options": [
+          {
+            "label": "Option 1",
+            "value": "option1"
+          },
+          { "label": "Option 2", "value": "option2" }
+        ],
+        "defaultValue": "option1",
+        "require": false
+      },
+      {
+        "name": "test3",
+        "label": "Test3",
+        "type": "select",
+        "options": [
+          {
+            "label": "Option 1",
+            "value": "option1"
+          },
+          { "label": "Option 2", "value": "option2" }
+        ],
+        "multiple": true,
+        "defaultValue": ["option1", "option2"],
+        "require": false
+      }
+    ]
+  }
+}
