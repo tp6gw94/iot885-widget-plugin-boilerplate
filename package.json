@@ -8,15 +8,19 @@
     "yarn": "1.22.18"
   },
   "scripts": {
-    "build": "esbuild src/index.tsx --bundle --minify --sourcemap --outfile=dist/index.js"
+    "buildPlugin": "esbuild plugin.ts --bundle --minify --platform=node --outfile=dist/plugin.js",
+    "buildIndex": "esbuild src/index.tsx --bundle --minify --sourcemap --outfile=dist/index.js ",
+    "initPluginJson": "node dist/plugin.js",
+    "build": "concurrently \"yarn buildPlugin\" \"yarn buildIndex\" \"yarn initPluginJson\""
   },
   "devDependencies": {
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.3",
+    "concurrently": "^7.2.0",
     "esbuild": "^0.14.39"
   },
   "dependencies": {
-    "iot885-plugin-core": "^1.0.7",
+    "iot885-plugin-core": "^1.0.9",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   }

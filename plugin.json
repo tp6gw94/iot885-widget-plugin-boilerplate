@@ -1,19 +1,10 @@
 {
-  "name": "iot885-widget-plugin-sample",
+  "author": "author",
+  "description": "description",
+  "name": "name",
+  "official": false,
   "version": "0.0.1",
-  "official": true,
-  "author": "todd",
-  "description": "",
-  "image": "http://placehold.jp/150x150.png",
   "editor": {
-    "fields": [
-      {
-        "name": "value",
-        "label": "Value",
-        "type": "text",
-        "defaultValue": "test",
-        "require": true
-      }
-    ]
+    "fields": []
   }
 }

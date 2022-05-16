@@ -8,12 +8,15 @@ type Meta = {
 };
 
 const App = () => {
-  const { history, meta } = usePluginWidget<Meta>({ name: packageJson.name });
+  const { history, meta, property } = usePluginWidget<Meta>({
+    name: packageJson.name,
+  });
   if (!history) return null;
   return (
     <div>
       {JSON.stringify(history)}
       {JSON.stringify(meta)}
+      {JSON.stringify(property)}
     </div>
   );
 };
