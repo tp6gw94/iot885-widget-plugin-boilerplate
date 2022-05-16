@@ -1,41 +1,18 @@
 {
+  "name": "iot885-widget-plugin-sample",
+  "version": "0.0.1",
+  "official": true,
+  "author": "todd",
+  "description": "",
+  "image": "http://placehold.jp/150x150.png",
   "editor": {
     "fields": [
       {
-        "name": "test",
-        "label": "Test",
+        "name": "value",
+        "label": "Value",
         "type": "text",
         "defaultValue": "test",
         "require": true
-      },
-      {
-        "name": "test2",
-        "label": "Test2",
-        "type": "select",
-        "options": [
-          {
-            "label": "Option 1",
-            "value": "option1"
-          },
-          { "label": "Option 2", "value": "option2" }
-        ],
-        "defaultValue": "option1",
-        "require": false
-      },
-      {
-        "name": "test3",
-        "label": "Test3",
-        "type": "select",
-        "options": [
-          {
-            "label": "Option 1",
-            "value": "option1"
-          },
-          { "label": "Option 2", "value": "option2" }
-        ],
-        "multiple": true,
-        "defaultValue": ["option1", "option2"],
-        "require": false
       }
     ]
   }
