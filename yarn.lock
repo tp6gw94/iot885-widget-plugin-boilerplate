@@ -240,14 +240,12 @@ has-flag@^4.0.0:
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-4.0.0.tgz#944771fd9c81c81265c4d6941860da06bb59479b"
   integrity sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==
 
-iot885-plugin-core@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/iot885-plugin-core/-/iot885-plugin-core-1.0.9.tgz#787583bca4e649908464b081cdc9ce72c5782e71"
-  integrity sha512-rr2Pi4HLP8yRj1VNoMPPxMf4gcrBCaqA3OWyr53CkEiMVC4IVyV497NZjKvBwS0txvLF9y2R6dUGZxluOFe3fg==
+iot885-plugin-core@^1.0.14:
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/iot885-plugin-core/-/iot885-plugin-core-1.0.14.tgz#1470f781a0b44ecc5bfb412952236e111a2f10d7"
+  integrity sha512-un0gsoHUKEq8GVZ4FLyyWKzHG9PHtN1K2YwIEbOkPTS6OV5S5ZxSUC5SQ5N+T4Q96x3F8hX13LN535MKhrVP4Q==
   dependencies:
     esbuild "^0.14.39"
-    react "^18.1.0"
-    react-dom "^18.1.0"
 
 is-fullwidth-code-point@^3.0.0:
   version "3.0.0"
