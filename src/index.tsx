@@ -7,7 +7,7 @@ type Meta = {
   field: string;
 };
 
-const App = () => {
+export const App = () => {
   const { history, meta, property } = usePluginWidget<Meta>({
     name: packageJson.name,
   });
