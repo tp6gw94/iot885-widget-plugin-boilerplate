@@ -9,7 +9,7 @@
   },
   "scripts": {
     "buildPlugin": "esbuild plugin.ts --bundle --minify --platform=node --outfile=dist/plugin.js",
-    "buildIndex": "esbuild src/index.tsx --bundle --minify --sourcemap --outfile=dist/index.js ",
+    "buildIndex": "esbuild src/index.tsx --define:global=window --inject:inject/inject.js --platform=node --bundle --minify --sourcemap --outfile=dist/index.js ",
     "initPluginJson": "node dist/plugin.js",
     "build": "concurrently \"yarn buildPlugin\" \"yarn buildIndex\" \"yarn initPluginJson\"",
     "storybook": "start-storybook -p 6006",
@@ -32,7 +32,8 @@
     "esbuild": "^0.14.39"
   },
   "dependencies": {
-    "iot885-plugin-core": "^1.0.14",
+    "iot885-plugin-core": "^1.0.27",
+    "mqtt": "^4.3.7",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
   }

@@ -1,5 +1,4 @@
-import { initPluginJson } from 'iot885-plugin-core/scripts';
-import { WidgetPlugin } from 'iot885-plugin-core/src/plugin';
+import { WidgetPlugin, initPluginJson } from 'iot885-plugin-core/dist/plugin';
 
 initPluginJson(
   new WidgetPlugin({

@@ -1,4 +1,4 @@
-import { usePluginWidget } from 'iot885-plugin-core';
+import { usePluginWidget } from 'iot885-plugin-core'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import packageJson from '../package.json';
