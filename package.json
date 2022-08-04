@@ -32,7 +32,7 @@
     "esbuild": "^0.14.39"
   },
   "dependencies": {
-    "iot885-plugin-core": "^1.0.27",
+    "iot885-plugin-core": "^1.0.30",
     "mqtt": "^4.3.7",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
