@@ -1,5 +1,5 @@
-import { usePluginWidget } from 'iot885-plugin-core'
-import React from 'react';
+import { usePluginWidget } from 'iot885-plugin-core';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import packageJson from '../package.json';
 
@@ -8,17 +8,16 @@ type Meta = {
 };
 
 export const App = () => {
-  const { history, meta, property } = usePluginWidget<Meta>({
+  const widget = usePluginWidget<Meta>({
     name: packageJson.name,
+    mode: process.env.REACT_APP_MODE as any,
   });
-  if (!history) return null;
-  return (
-    <div>
-      {JSON.stringify(history)}
-      {JSON.stringify(meta)}
-      {JSON.stringify(property)}
-    </div>
-  );
+
+  useEffect(() => {
+    console.log(widget);
+  }, [widget]);
+
+  return <div></div>;
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));

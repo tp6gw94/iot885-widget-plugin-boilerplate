@@ -8,11 +8,11 @@
     "yarn": "1.22.18"
   },
   "scripts": {
-    "buildPlugin": "esbuild plugin.ts --bundle --minify --platform=node --outfile=dist/plugin.js",
-    "buildIndex": "esbuild src/index.tsx --define:global=window --inject:inject/inject.js --platform=node --bundle --minify --sourcemap --outfile=dist/index.js ",
-    "initPluginJson": "node dist/plugin.js",
-    "build": "concurrently \"yarn buildPlugin\" \"yarn buildIndex\" \"yarn initPluginJson\"",
-    "storybook": "start-storybook -p 6006",
+    "copyPluginImg": "cp plugin.png dist/plugin.png",
+    "buildIndex": "esbuild src/index.tsx --define:global=window --inject:inject/inject.js --bundle --minify --sourcemap --outfile=dist/index.js ",
+    "initPluginJson": "create-iot885-plugin json",
+    "build": "concurrently \"yarn buildIndex\" \"yarn copyPluginImg\" \"yarn initPluginJson\"",
+    "storybook": "mode=development start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
@@ -27,14 +27,17 @@
     "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.3",
+    "@types/styled-components": "^5.1.26",
     "babel-loader": "^8.2.5",
     "concurrently": "^7.2.0",
+    "create-iot885-plugin": "^2.0.0",
     "esbuild": "^0.14.39"
   },
   "dependencies": {
-    "iot885-plugin-core": "^1.0.30",
+    "iot885-plugin-core": "^2.0.5",
     "mqtt": "^4.3.7",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "styled-components": "^5.3.5"
   }
 }
